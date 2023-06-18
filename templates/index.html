@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>天氣查詢</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="row">
+        <div class="col s12 m6 offset-m3">
+            <div class="card">
+                <div class="card-content">
+                    <div class="center-align">
+                        <img src="https://2.bp.blogspot.com/-FI-JVSzij2c/VJ6W-evlJZI/AAAAAAAAqC8/9RnYp30LzGM/s800/job_kisyou_yohou.png" alt="yohou" width="175" class="responsive-img">
+                    </div>
+                    <br><br>
+                    <form action="weather.html" method="post">
+                        <h1>天氣查詢</h1>
+                        <div class="input-field">
+                            <input type="text" id="city" name="city" required>
+                            <label for="city">輸入城市名稱</label>
+                        </div>
+                        <br><br>
+                        <div class="center-align">
+                            <button class="btn waves-effect waves-light" type="submit">查詢</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<p>Powered by KEET, Image by <a href="https://www.irasutoya.com/">irasutoya.com</a></p>-->
+    <img src="https://camo.githubusercontent.com/36bb3513ecae40a80a2e0e2b41f8a9cccef8e08dd02e3e94743a199bf2c8f021/68747470733a2f2f6861636b6d642e696f2f5f75706c6f6164732f5331493572454634322e706e67" alt="logo" width="100" class="logo">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

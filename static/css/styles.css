@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.card {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-field label {
+    font-size: 16px;
+    color: #888;
+}
+
+.input-field input[type="text"] {
+    font-size: 16px;
+    border-bottom: 1px solid #888;
+}
+
+.btn {
+    background-color: #4CAF50;
+}
+
+.goback-btn:hover {
+    background-color: #45a049;
+}
+
+.goback-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}

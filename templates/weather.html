@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>天氣資訊</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>天氣資訊</h1>
+    {% if weather.error == 404 %}
+        <p>你搜尋的{{ weather.city }}無相關資訊，請確定完整填寫縣市名稱</p>
+        <p>台北/台中/台南請記得使用大寫 “臺” </p>
+    {% elif weather.error == 401 %}
+        <p>系統異常，請聯繫作者(CWE-ISSUE)</p>
+    {% else %}
+        <p>城市：{{ weather.city }}</p>
+        <p>溫度：{{ weather.temperature }} 攝氏度</p>
+        <p>描述：{{ weather.description }}</p>
+        {% if weather.image_value == "1" %}
+            <img src="{{ url_for('static', filename='images/mark_tenki_hare.png') }}" alt="hare" width="200">
+            <!--晴天-->
+        {% elif weather.image_value in ["2", "3", "24", "25"] %}
+            <img src="{{ url_for('static', filename='images/mark_tenki_hare_kumori.png') }}" alt="harekumori" width="200">
+            <!--晴時多雲-->
+        {% elif weather.image_value in ["4", "5", "6", "7", "26", "27", "28"] %}
+            <img src="{{ url_for('static', filename='images/mark_tenki_kumori.png') }}" alt="kumori" width="200">
+            <!--多雲-->
+        {% elif weather.image_value == "11" %}
+            <img src="{{ url_for('static', filename='images/tenki_mark03_gouu.png') }}" alt="rainy" width="200">
+            <!--下雨-->
+        {% elif weather.image_value in ["23", "42"] %}
+            <img src="{{ url_for('static', filename='images/tenki_snow.png') }}" alt="snow" width="200">
+            <!--下雪-->
+        {% else %}
+            <img src="{{ url_for('static', filename='images/mark_tenki_kumori_ame.png') }}" alt="kumoriame" width="200">
+        {% endif %}
+    {% endif %}
+    <br><br>
+    <button class="goback-btn" onclick="history.back()">回上一頁</button>
+</body>
+</html>

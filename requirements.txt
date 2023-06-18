@@ -1,0 +1,3 @@
+bardapi>=0.1.8
+flask
+requests
