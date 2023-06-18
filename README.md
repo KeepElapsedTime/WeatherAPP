@@ -52,6 +52,10 @@ How to register CWB?
 - Get CWB Token
 
 ---
+Reference & Link
+
+[Opendata CWB](https://opendata.cwb.gov.tw/dist/opendata-swagger.html#/%E9%A0%90%E5%A0%B1/get_v1_rest_datastore_F_C0032_001)
+
 [Source Code](https://github.com/tingruikp0925/WeatherAPP.git)
 
 ---
