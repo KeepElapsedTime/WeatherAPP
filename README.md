@@ -1,5 +1,8 @@
 # Build Weather App - TW
 
+[![hackmd-github-sync-badge](https://hackmd.io/zgc3oOJMTBWf4PYwGvenOg/badge)](https://hackmd.io/zgc3oOJMTBWf4PYwGvenOg)
+
+
 ###### tags: `public`,`build`,`weather`
 
 
