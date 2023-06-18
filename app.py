@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import requests
+import os
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ def home():
 @app.route('/weather.html', methods=['POST'])
 def weather():
     params = {
-        "Authorization": "your-token-here",
+        "Authorization": os.environ.get('AUTHORIZATION'),
         "locationName": request.form['city'],
     }
     url = f'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001'
@@ -51,4 +52,4 @@ def weather():
     return render_template('weather.html', weather=weather_data)
 
 if __name__ == '__main__':
-    app.run(port=3333)
+    app.run(host='0.0.0.0',port=3333)

@@ -1,7 +1,8 @@
-FROM python:3.8
+FROM python:3.9
+COPY . /app
 WORKDIR /app
-COPY requirements.txt .
 RUN pip install --upgrade pip && pip install -r requirements.txt
+EXPOSE 3333
 COPY app.py .
-ENV PYTHONUNBUFFERED=1
+ENV AUTHORIZATION=your-token-here
 CMD ["python", "-u", "app.py"]
